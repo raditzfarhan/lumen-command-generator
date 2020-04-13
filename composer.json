@@ -1,0 +1,27 @@
+{
+	"name": "raditzfarhan/lumen-command-generator",
+	"description": "This is a simple package that includes some of the missing Laravel artisan command into Lumen.",
+	"require": {
+		"php": "^7.2.5",
+		"illuminate/console": "^6.0|^7.0|^8.0",
+		"illuminate/support": "^6.0|^7.0|^8.0"
+	},
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Farhan",
+			"email": "raditzfarhan@gmail.com"
+		}
+	],
+	"minimum-stability": "dev",
+	"autoload": {
+		"psr-4": {
+			"RaditzFarhan\\LumenCommandGenerator\\": "src/"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [ "RaditzFarhan\\LumenCommandGenerator\\ServiceProvider" ]
+		}
+	}
+}

@@ -13,11 +13,14 @@ class ServiceProvider extends SP
      */
     public function boot()
     {
+        $commands = ['ModelGenerateCommand', 'ProviderGenerateCommand'];
+
         // register commands
         if ($this->app->runningInConsole()) {
-            $this->commands([
-                \RaditzFarhan\LumenCommandGenerator\Commands\ModelGenerateCommand::class,
-            ]);
+
+            $this->commands(collect($commands)->map(function ($name) {
+                return __NAMESPACE__ . "\Commands\\$name";
+            })->toArray());
         }
     }
 

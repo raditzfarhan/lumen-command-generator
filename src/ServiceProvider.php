@@ -22,12 +22,11 @@ class ServiceProvider extends SP
             'JobGenerateCommand',
             'EventGenerateCommand',
             'ListenerGenerateCommand',
-            'ObserverGenerateCommand'
+            'ObserverGenerateCommand',
         ];
 
         // register commands
         if ($this->app->runningInConsole()) {
-
             $this->commands(collect($commands)->map(function ($name) {
                 return __NAMESPACE__ . "\Commands\\$name";
             })->toArray());

@@ -3,9 +3,6 @@ preset: laravel
 enabled:
   - alpha_ordered_imports
 
-disabled:
-  - align_double_arrow
-
 finder:
   exclude:    
     - "vendor"

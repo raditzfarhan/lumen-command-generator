@@ -3,7 +3,6 @@
 namespace RaditzFarhan\LumenCommandGenerator\Commands;
 
 use Illuminate\Console\GeneratorCommand;
-use Symfony\Component\Console\Input\InputOption;
 
 class JobGenerateCommand extends GeneratorCommand
 {

@@ -39,7 +39,7 @@ class ListenerGenerateCommand extends GeneratorCommand
     {
         $event = $this->option('event');
 
-        if (! Str::startsWith($event, [
+        if (!Str::startsWith($event, [
             $this->laravel->getNamespace(),
             'Illuminate',
             '\\',

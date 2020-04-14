@@ -16,7 +16,7 @@ class ServiceProvider extends SP
         // register commands
         if ($this->app->runningInConsole()) {
             $this->commands([
-                \RaditzFarhan\LumenCommandGenerator\Commands\ModelGenerateCommand::class
+                \RaditzFarhan\LumenCommandGenerator\Commands\ModelGenerateCommand::class,
             ]);
         }
     }

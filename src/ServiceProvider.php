@@ -13,7 +13,17 @@ class ServiceProvider extends SP
      */
     public function boot()
     {
-        $commands = ['ModelGenerateCommand', 'ProviderGenerateCommand'];
+        $commands = [
+            'ModelGenerateCommand',
+            'ProviderGenerateCommand',
+            'ConsoleGenerateCommand',
+            'ControllerGenerateCommand',
+            'MiddlewareGenerateCommand',
+            'JobGenerateCommand',
+            'EventGenerateCommand',
+            'ListenerGenerateCommand',
+            'ObserverGenerateCommand'
+        ];
 
         // register commands
         if ($this->app->runningInConsole()) {

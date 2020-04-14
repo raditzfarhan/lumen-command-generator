@@ -42,10 +42,16 @@ class ModelGenerateCommand extends GeneratorCommand
 
         if ($this->option('all')) {
             $this->input->setOption('factory', true);
+            $this->input->setOption('controller', true);
+            $this->input->setOption('resource', true);
         }
 
         if ($this->option('migration')) {
             $this->createMigration();
+        }
+
+        if ($this->option('controller') || $this->option('resource')) {
+            $this->createController();
         }
     }
 
@@ -69,6 +75,23 @@ class ModelGenerateCommand extends GeneratorCommand
     }
 
     /**
+     * Create a controller for the model.
+     *
+     * @return void
+     */
+    protected function createController()
+    {
+        $controller = Str::studly(class_basename($this->argument('name')));
+
+        $modelName = $this->qualifyClass($this->getNameInput());
+
+        $this->call('generate:controller', [
+            'name' => "{$controller}Controller",
+            '--model' => $this->option('resource') ? $modelName : null,
+        ]);
+    }
+
+    /**
      * Get the stub file for the generator.
      *
      * @return string
@@ -76,10 +99,10 @@ class ModelGenerateCommand extends GeneratorCommand
     protected function getStub()
     {
         if ($this->option('pivot')) {
-            return __DIR__.'/stubs/pivot.model.stub';
+            return __DIR__ . '/stubs/pivot.model.stub';
         }
 
-        return __DIR__.'/stubs/model.stub';
+        return __DIR__ . '/stubs/model.stub';
     }
 
     /**
@@ -92,11 +115,15 @@ class ModelGenerateCommand extends GeneratorCommand
         return [
             ['all', 'a', InputOption::VALUE_NONE, 'Generate a migration for the model as well'],
 
+            ['controller', 'c', InputOption::VALUE_NONE, 'Create a new controller for the model'],
+
             ['force', null, InputOption::VALUE_NONE, 'Create the class even if the model already exists'],
 
             ['migration', 'm', InputOption::VALUE_NONE, 'Create a new migration file for the model'],
 
             ['pivot', 'p', InputOption::VALUE_NONE, 'Indicates if the generated model should be a custom intermediate table model'],
+
+            ['resource', 'r', InputOption::VALUE_NONE, 'Indicates if the generated controller should be a resource controller'],
         ];
     }
 }

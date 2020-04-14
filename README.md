@@ -1,4 +1,4 @@
-<p align="center"><img src="https://res.cloudinary.com/raditzfarhan/image/upload/v1586864163/lumen-command-generator_kf3cfg.svg" width="640"></p>
+<p align="center"><img src="https://res.cloudinary.com/raditzfarhan/image/upload/v1586879750/lumen-command-generator_aqliwn.svg" width="640"></p>
 
 <p align="center">
     <a href="https://packagist.org/packages/raditzfarhan/lumen-command-generator"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" alt="License"></a>
@@ -24,7 +24,15 @@ $app->register(RaditzFarhan\LumenCommandGenerator\ServiceProvider::class);
 ## Available Commands
 
 ``` bash
-$ php artisan generate:model
+generate:command        Create a new Artisan command
+generate:controller     Create a new controller class
+generate:event          Create a new event class        
+generate:job            Create a new job class
+generate:listener       Create a new event listener class
+generate:middleware     Create a new middleware class
+generate:model          Create a new Eloquent model class
+generate:observer       Create a new observer class
+generate:provider       Create a new service provider class
 ```
 
 ## Change log

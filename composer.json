@@ -1,6 +1,7 @@
 {
 	"name": "raditzfarhan/lumen-command-generator",
 	"description": "This is a simple package that includes some of the missing Laravel artisan command into Lumen.",
+	"keywords": [ "lumen", "make", "command", "generator", "laravel" ],
 	"require": {
 		"php": "^7.2.5",
 		"illuminate/console": "^6.0|^7.0|^8.0",

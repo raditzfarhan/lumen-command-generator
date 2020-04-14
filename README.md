@@ -1,8 +1,10 @@
+<p align="center"><img src="https://res.cloudinary.com/raditzfarhan/image/upload/v1586864163/lumen-command-generator_kf3cfg.svg" width="640"></p>
+
 <p align="center">
-<a href="https://packagist.org/packages/raditzfarhan/lumen-command-generator"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" alt="License"></a>
-<a href="https://packagist.org/packages/raditzfarhan/lumen-command-generator"><img src="https://img.shields.io/packagist/dt/raditzfarhan/lumen-command-generator?style=flat-square&color=red" alt="Total Downloads"></img></a>
-<a href="https://github.com/raditzfarhan/lumen-command-generator/releases"><img src="https://img.shields.io/github/v/tag/raditzfarhan/lumen-command-generator?style=flat-square&sort=semver" alt="Latest Version"></img></a>
-<a href="https://packagist.org/packages/raditzfarhan/lumen-command-generator"><img src="https://github.styleci.io/repos/7548986/shield?style=square" alt="styleci"></img></a>
+    <a href="https://packagist.org/packages/raditzfarhan/lumen-command-generator"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" alt="License"></a>
+    <a href="https://packagist.org/packages/raditzfarhan/lumen-command-generator"><img src="https://img.shields.io/packagist/dt/raditzfarhan/lumen-command-generator?style=flat-square&color=red" alt="Total Downloads"></img></a>
+    <a href="https://github.com/raditzfarhan/lumen-command-generator/releases"><img src="https://img.shields.io/github/v/tag/raditzfarhan/lumen-command-generator?style=flat-square&sort=semver" alt="Latest Version"></img></a>
+    <a href="https://packagist.org/packages/raditzfarhan/lumen-command-generator"><img src="https://github.styleci.io/repos/7548986/shield?style=square" alt="styleci"></img></a>
 </p>
 
 # Lumen Command Generator

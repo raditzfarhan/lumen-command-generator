@@ -63,7 +63,7 @@ class ModelGenerateCommand extends GeneratorCommand
         }
 
         $this->call('make:migration', [
-            'name' => "create_{$table}_table",
+            'name'     => "create_{$table}_table",
             '--create' => $table,
         ]);
     }
@@ -76,10 +76,10 @@ class ModelGenerateCommand extends GeneratorCommand
     protected function getStub()
     {
         if ($this->option('pivot')) {
-            return __DIR__ . '/stubs/pivot.model.stub';
+            return __DIR__.'/stubs/pivot.model.stub';
         }
 
-        return __DIR__ . '/stubs/model.stub';
+        return __DIR__.'/stubs/model.stub';
     }
 
     /**

@@ -23,6 +23,8 @@ class ServiceProvider extends SP
             'EventGenerateCommand',
             'ListenerGenerateCommand',
             'ObserverGenerateCommand',
+            'ResourceGenerateCommand',
+            'RuleGenerateCommand',
         ];
 
         // register commands

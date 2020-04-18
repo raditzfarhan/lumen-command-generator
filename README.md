@@ -41,7 +41,7 @@ Please see the [changelog](CHANGELOG.md) for more information on what has change
 
 ## Credits
 
-- [Raditz Farhan][https://github.com/raditzfarhan]
+- [Raditz Farhan](https://github.com/raditzfarhan)
 
 ## License
 

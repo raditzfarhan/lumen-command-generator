@@ -2,6 +2,11 @@
 
 All notable changes to Lumen Command Generator will be documented in this file.
 
+## Version 1.0.2 (2020-04-19)
+
+### Added
+- Add "generate:resource" and "generate:rule" command.
+
 ## Version 1.0.1 (2020-04-15)
 
 ### Changed

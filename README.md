@@ -33,6 +33,8 @@ generate:middleware     Create a new middleware class
 generate:model          Create a new Eloquent model class
 generate:observer       Create a new observer class
 generate:provider       Create a new service provider class
+make:resource           Create a new resource
+make:rule               Create a new validation rule
 ```
 
 ## Change log

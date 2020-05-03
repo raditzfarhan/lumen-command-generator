@@ -11,7 +11,7 @@ class EventGenerateCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'generate:event';
+    protected $name = 'create:event';
 
     /**
      * The console command description.
@@ -45,7 +45,7 @@ class EventGenerateCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/event.stub';
+        return __DIR__ . '/stubs/event.stub';
     }
 
     /**
@@ -56,6 +56,6 @@ class EventGenerateCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Events';
+        return $rootNamespace . '\Events';
     }
 }

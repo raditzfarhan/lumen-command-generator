@@ -11,7 +11,7 @@ class MiddlewareGenerateCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'generate:middleware';
+    protected $name = 'create:middleware';
 
     /**
      * The console command description.
@@ -34,7 +34,7 @@ class MiddlewareGenerateCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/middleware.stub';
+        return __DIR__ . '/stubs/middleware.stub';
     }
 
     /**
@@ -45,6 +45,6 @@ class MiddlewareGenerateCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Http\Middleware';
+        return $rootNamespace . '\Http\Middleware';
     }
 }

@@ -13,7 +13,7 @@ class ListenerGenerateCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'generate:listener';
+    protected $name = 'create:listener';
 
     /**
      * The console command description.
@@ -44,15 +44,19 @@ class ListenerGenerateCommand extends GeneratorCommand
             'Illuminate',
             '\\',
         ])) {
-            $event = $this->laravel->getNamespace().'Events\\'.$event;
+            $event = $this->laravel->getNamespace() . 'Events\\' . $event;
         }
 
         $stub = str_replace(
-            'DummyEvent', class_basename($event), parent::buildClass($name)
+            'DummyEvent',
+            class_basename($event),
+            parent::buildClass($name)
         );
 
         return str_replace(
-            'DummyFullEvent', trim($event, '\\'), $stub
+            'DummyFullEvent',
+            trim($event, '\\'),
+            $stub
         );
     }
 
@@ -65,13 +69,13 @@ class ListenerGenerateCommand extends GeneratorCommand
     {
         if ($this->option('queued')) {
             return $this->option('event')
-                        ? __DIR__.'/stubs/listener-queued.stub'
-                        : __DIR__.'/stubs/listener-queued-duck.stub';
+                ? __DIR__ . '/stubs/listener-queued.stub'
+                : __DIR__ . '/stubs/listener-queued-duck.stub';
         }
 
         return $this->option('event')
-                    ? __DIR__.'/stubs/listener.stub'
-                    : __DIR__.'/stubs/listener-duck.stub';
+            ? __DIR__ . '/stubs/listener.stub'
+            : __DIR__ . '/stubs/listener-duck.stub';
     }
 
     /**
@@ -93,7 +97,7 @@ class ListenerGenerateCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Listeners';
+        return $rootNamespace . '\Listeners';
     }
 
     /**

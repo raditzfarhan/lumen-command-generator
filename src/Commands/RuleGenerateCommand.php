@@ -11,7 +11,7 @@ class RuleGenerateCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'generate:rule';
+    protected $name = 'create:rule';
 
     /**
      * The console command description.
@@ -34,7 +34,7 @@ class RuleGenerateCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/rule.stub';
+        return __DIR__ . '/stubs/rule.stub';
     }
 
     /**
@@ -45,6 +45,6 @@ class RuleGenerateCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Rules';
+        return $rootNamespace . '\Rules';
     }
 }

@@ -11,7 +11,7 @@ class ProviderGenerateCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'generate:provider';
+    protected $name = 'create:provider';
 
     /**
      * The console command description.
@@ -34,7 +34,7 @@ class ProviderGenerateCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/provider.stub';
+        return __DIR__ . '/stubs/provider.stub';
     }
 
     /**
@@ -45,6 +45,6 @@ class ProviderGenerateCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Providers';
+        return $rootNamespace . '\Providers';
     }
 }

@@ -13,7 +13,7 @@ class ConsoleGenerateCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'generate:command';
+    protected $name = 'create:command';
 
     /**
      * The console command description.
@@ -50,7 +50,7 @@ class ConsoleGenerateCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/console.stub';
+        return __DIR__ . '/stubs/console.stub';
     }
 
     /**
@@ -61,7 +61,7 @@ class ConsoleGenerateCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Console\Commands';
+        return $rootNamespace . '\Console\Commands';
     }
 
     /**

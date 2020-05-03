@@ -13,7 +13,7 @@ class ResourceGenerateCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'generate:resource';
+    protected $name = 'create:resource';
 
     /**
      * The console command description.
@@ -51,8 +51,8 @@ class ResourceGenerateCommand extends GeneratorCommand
     protected function getStub()
     {
         return $this->collection()
-                    ? __DIR__.'/stubs/resource-collection.stub'
-                    : __DIR__.'/stubs/resource.stub';
+            ? __DIR__ . '/stubs/resource-collection.stub'
+            : __DIR__ . '/stubs/resource.stub';
     }
 
     /**
@@ -63,7 +63,7 @@ class ResourceGenerateCommand extends GeneratorCommand
     protected function collection()
     {
         return $this->option('collection') ||
-               Str::endsWith($this->argument('name'), 'Collection');
+            Str::endsWith($this->argument('name'), 'Collection');
     }
 
     /**
@@ -74,7 +74,7 @@ class ResourceGenerateCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Http\Resources';
+        return $rootNamespace . '\Http\Resources';
     }
 
     /**

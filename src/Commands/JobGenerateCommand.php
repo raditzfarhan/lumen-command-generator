@@ -11,7 +11,7 @@ class JobGenerateCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'generate:job';
+    protected $name = 'create:job';
 
     /**
      * The console command description.
@@ -34,7 +34,7 @@ class JobGenerateCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/job.stub';
+        return __DIR__ . '/stubs/job.stub';
     }
 
     /**
@@ -45,6 +45,6 @@ class JobGenerateCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Jobs';
+        return $rootNamespace . '\Jobs';
     }
 }

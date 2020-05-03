@@ -13,7 +13,7 @@ class ObserverGenerateCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'generate:observer';
+    protected $name = 'create:observer';
 
     /**
      * The console command description.
@@ -52,8 +52,8 @@ class ObserverGenerateCommand extends GeneratorCommand
     protected function getStub()
     {
         return $this->option('model')
-                    ? __DIR__.'/stubs/observer.stub'
-                    : __DIR__.'/stubs/observer.plain.stub';
+            ? __DIR__ . '/stubs/observer.stub'
+            : __DIR__ . '/stubs/observer.plain.stub';
     }
 
     /**
@@ -67,7 +67,7 @@ class ObserverGenerateCommand extends GeneratorCommand
     {
         $model = str_replace('/', '\\', $model);
 
-        $namespaceModel = $this->laravel->getNamespace().$model;
+        $namespaceModel = $this->laravel->getNamespace() . $model;
 
         if (Str::startsWith($model, '\\')) {
             $stub = str_replace('NamespacedDummyModel', trim($model, '\\'), $stub);
@@ -76,7 +76,9 @@ class ObserverGenerateCommand extends GeneratorCommand
         }
 
         $stub = str_replace(
-            "use {$namespaceModel};\nuse {$namespaceModel};", "use {$namespaceModel};", $stub
+            "use {$namespaceModel};\nuse {$namespaceModel};",
+            "use {$namespaceModel};",
+            $stub
         );
 
         $model = class_basename(trim($model, '\\'));
@@ -96,7 +98,7 @@ class ObserverGenerateCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Observers';
+        return $rootNamespace . '\Observers';
     }
 
     /**

@@ -25,6 +25,7 @@ class ServiceProvider extends SP
             'ObserverGenerateCommand',
             'ResourceGenerateCommand',
             'RuleGenerateCommand',
+            'RouteListCommand',
         ];
 
         // register commands

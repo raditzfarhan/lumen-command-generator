@@ -37,7 +37,7 @@ class RouteListCommand extends Command
      *
      * @var array
      */
-    protected $headers = ['Method', 'URI',  'Name', 'Uses', 'Action', 'Middleware'];
+    protected $headers = ['Method', 'URI',  'Name', 'Action', 'Middleware'];
 
     /**
      * The columns to display when using the "compact" flag.
@@ -111,8 +111,7 @@ class RouteListCommand extends Command
             'method' => $route['method'],
             'uri'    => $route['uri'],
             'name'   => $this->getNameAs($route),
-            'uses'   => $this->getUses($route),
-            'action' => $this->getActionName($route),
+            'action' => ltrim($this->getAction($route), '\\'),
             'middleware' => $this->getMiddleware($route),
         ]);
     }
@@ -187,38 +186,18 @@ class RouteListCommand extends Command
     }
 
     /**
-     * Get Action Name.
+     * Get Action.
      *
      * @param  array  $route
      * @return string|null
      */
-    protected function getActionName(array $route)
-    {
-        if (!empty($route['action']['uses'])) {
-            $data = $route['action']['uses'];
-            if (($pos = strpos($data, "@")) !== false) {
-                return substr($data, $pos + 1);
-            } else {
-                return null;
-            }
-        } else {
-            return 'Closure';
-        }
-    }
-
-    /**
-     * Get Uses.
-     *
-     * @param  array  $route
-     * @return string|null
-     */
-    protected function getUses(array $route)
+    protected function getAction(array $route)
     {
         if (isset($route['action']['uses'])) {
             return $route['action']['uses'];
         }
 
-        return null;
+        return 'Closure';
     }
 
     /**

@@ -4,9 +4,9 @@ namespace RaditzFarhan\LumenCommandGenerator\Commands;
 
 use Closure;
 use Illuminate\Console\Command;
-use Laravel\Lumen\Routing\Router;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
+use Laravel\Lumen\Routing\Router;
 use Symfony\Component\Console\Input\InputOption;
 
 class RouteListCommand extends Command
@@ -169,10 +169,11 @@ class RouteListCommand extends Command
      */
     protected function getMiddleware($route)
     {
-        if (isset($route['action']['middleware']))
+        if (isset($route['action']['middleware'])) {
             return collect($route['action']['middleware'])->map(function ($middleware) {
                 return $middleware instanceof Closure ? 'Closure' : $middleware;
             })->implode(',');
+        }
     }
 
     /**
@@ -196,10 +197,10 @@ class RouteListCommand extends Command
     {
         if (!empty($route['action']['uses'])) {
             $data = $route['action']['uses'];
-            if (($pos = strpos($data, "@")) !== false) {
+            if (($pos = strpos($data, '@')) !== false) {
                 return substr($data, $pos + 1);
             } else {
-                return null;
+                return;
             }
         } else {
             return 'Closure';
@@ -217,8 +218,6 @@ class RouteListCommand extends Command
         if (isset($route['action']['uses'])) {
             return $route['action']['uses'];
         }
-
-        return null;
     }
 
     /**

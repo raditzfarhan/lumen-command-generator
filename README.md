@@ -35,6 +35,7 @@ create:observer       Create a new observer class
 create:provider       Create a new service provider class
 create:resource       Create a new resource
 create:rule           Create a new validation rule
+route:list            List all registered routes
 ```
 
 ## Change log

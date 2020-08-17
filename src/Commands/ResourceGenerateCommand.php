@@ -13,7 +13,7 @@ class ResourceGenerateCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'create:resource';
+    protected $name = 'make:resource';
 
     /**
      * The console command description.

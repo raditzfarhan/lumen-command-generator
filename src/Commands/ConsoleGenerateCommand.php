@@ -13,7 +13,7 @@ class ConsoleGenerateCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'create:command';
+    protected $name = 'make:command';
 
     /**
      * The console command description.

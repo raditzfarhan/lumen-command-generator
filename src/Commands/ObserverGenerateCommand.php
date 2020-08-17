@@ -13,7 +13,7 @@ class ObserverGenerateCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'create:observer';
+    protected $name = 'make:observer';
 
     /**
      * The console command description.

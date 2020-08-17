@@ -24,18 +24,18 @@ $app->register(RaditzFarhan\LumenCommandGenerator\ServiceProvider::class);
 ## Available Commands
 
 ``` bash
-create:command        Create a new Artisan command
-create:controller     Create a new controller class
-create:event          Create a new event class        
-create:job            Create a new job class
-create:listener       Create a new event listener class
-create:middleware     Create a new middleware class
-create:model          Create a new Eloquent model class
-create:observer       Create a new observer class
-create:provider       Create a new service provider class
-create:resource       Create a new resource
-create:rule           Create a new validation rule
-route:list            List all registered routes
+make:command        Create a new Artisan command
+make:controller     Create a new controller class
+make:event          Create a new event class        
+make:job            Create a new job class
+make:listener       Create a new event listener class
+make:middleware     Create a new middleware class
+make:model          Create a new Eloquent model class
+make:observer       Create a new observer class
+make:provider       Create a new service provider class
+make:resource       Create a new resource
+make:rule           Create a new validation rule
+route:list          List all registered routes
 ```
 
 ## Change log

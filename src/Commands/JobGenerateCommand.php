@@ -11,7 +11,7 @@ class JobGenerateCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'create:job';
+    protected $name = 'make:job';
 
     /**
      * The console command description.

@@ -11,7 +11,7 @@ class RuleGenerateCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'create:rule';
+    protected $name = 'make:rule';
 
     /**
      * The console command description.

@@ -13,7 +13,7 @@ class ListenerGenerateCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'create:listener';
+    protected $name = 'make:listener';
 
     /**
      * The console command description.

@@ -2,6 +2,11 @@
 
 All notable changes to Lumen Command Generator will be documented in this file.
 
+## Version 1.0.4 (2020-08-17)
+
+### Changed
+- Change all "create" command to "make" command.
+
 ## Version 1.0.3 (2020-05-03)
 
 ### Changed

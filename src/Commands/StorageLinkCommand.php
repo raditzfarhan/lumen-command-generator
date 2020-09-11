@@ -5,7 +5,6 @@ namespace RaditzFarhan\LumenCommandGenerator\Commands;
 use Exception;
 use Illuminate\Console\Command;
 use Symfony\Component\Filesystem\Filesystem as SymfonyFilesystem;
-use Illuminate\Support\Facades\File;
 
 class StorageLinkCommand extends Command
 {

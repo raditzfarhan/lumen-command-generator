@@ -36,6 +36,7 @@ make:provider       Create a new service provider class
 make:resource       Create a new resource
 make:rule           Create a new validation rule
 route:list          List all registered routes
+storage:link        Create the symbolic links configured for the application
 ```
 
 ## Change log

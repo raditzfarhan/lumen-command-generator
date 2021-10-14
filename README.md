@@ -11,6 +11,14 @@
 
 This is a simple package that includes some of the missing Laravel artisan command into Lumen.
 
+## Installation
+
+You can install the package via composer:
+
+```bash
+composer require raditzfarhan/lumen-command-generator
+```
+
 ## Configuration
 
 Edit the `bootstrap/app.php` file and add the following line to register the service provider:

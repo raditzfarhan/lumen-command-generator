@@ -2,6 +2,11 @@
 
 All notable changes to Lumen Command Generator will be documented in this file.
 
+## Version 1.0.7 (2021-10-15)
+
+### Changed
+- Update readme to add installation section.
+
 ## Version 1.0.6 (2021-10-15)
 
 ### Added
